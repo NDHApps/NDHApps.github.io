@@ -7,7 +7,7 @@
     Responsive Navigation
 \*------------------------------------*/
 body {
-	background:#ECF0F1;
+	background:#886CAF;
 }
 a,
 a:hover {
@@ -71,7 +71,7 @@ ol {
 	display:none; /* Hide from browsers that don't support media queries */
 	cursor:pointer;
 	position:absolute;
-	top:-50px;
+	top:-55px;
 	right:0;
 	background:#886CAF url(../img/nav.svg) no-repeat center center;
 	height:50px;
@@ -95,7 +95,7 @@ ol {
 	}
 	.nav-list {
 		display:none;
-        padding:10px 0 0;
+        padding:5px 0 5px 0;
 	}
 	.nav-item {
 		width:100%;

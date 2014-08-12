@@ -20,8 +20,8 @@
 	text-rendering:optimizeLegibility;
 }
 body {
-	font:400 13px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	background:#333;
+	font:400 14px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #fff;
 }
 
 /*------------------------------------*\
@@ -33,9 +33,9 @@ body {
 	margin:0 auto;
 }
 .header {
-	padding:15px 25px;
+	padding:15px 15px 10px 15px;
 	background:#FFF;
-	border-left:8px solid #886CAF;
+	border-left:3px solid #886CAF;
 	overflow:hidden;
 }
 .logo {
@@ -45,11 +45,4 @@ body {
 	float:right;
 	margin:12px 0;
 	list-style:none;
-}
-.demo-nav-link {
-	
-}
-.demo-nav-link a {
-	color:#2BA6CB;
-	text-decoration:none;
 }
