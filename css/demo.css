@@ -71,7 +71,7 @@ ol {
 	display:none; /* Hide from browsers that don't support media queries */
 	cursor:pointer;
 	position:absolute;
-	top:-48px;
+	top:-50px;
 	right:0;
 	background:#886CAF url(../img/nav.svg) no-repeat center center;
 	height:50px;
