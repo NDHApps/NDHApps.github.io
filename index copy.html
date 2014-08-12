@@ -2,10 +2,72 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Responsive navigation by @toddmotto | toddmotto.com</title>
+            <title>NDH Apps – Home</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<link href="css/main.css" rel="stylesheet">
-		<link href="css/demo.css" rel="stylesheet">
+		<link href="css/menu.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/idangerous.swiper.css">
+        <style>
+        .device {
+            width: 320px;
+            height: 580px;
+            padding: 10px;
+            background: #886CAF url(img/iphone.png) no-repeat center center;
+            margin: 5px auto;
+            position: relative;
+        }
+        .device .arrow-left {
+            background: url(img/arrows.png) no-repeat left top;
+            position: absolute;
+            left: 0px;
+            top: 45%;
+            margin-top: -15px;
+            width: 17px;
+            height: 30px;
+        }
+        .device .arrow-right {
+            background: url(img/arrows.png) no-repeat left bottom;
+            position: absolute;
+            right: 0px;
+            top: 45%;
+            margin-top: -15px;
+            width: 17px;
+            height: 30px;
+        }
+        .swiper-container {
+            height: 379px;
+            width: 214px;
+            top: 69px;
+        }
+        .content-slide {
+            padding: 20px;
+            color: #fff;
+        }
+        .title {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .pagination {
+            position: absolute;
+            left: 0;
+            text-align: center;
+            bottom:10px;
+            width: 100%;
+        }
+        .swiper-pagination-switch {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background: #999;
+            box-shadow: 0px 1px 2px #555 inset;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+        .swiper-active-switch {
+            background: #fff;
+        }
+        </style>
 	</head>
 	<body>
 		<div class="header">
@@ -33,33 +95,63 @@
 			<div class="main">
 				
 				<div class="content">
-					<p class="content-text">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra interdum semper. 
-						Ut blandit adipiscing tempor. Etiam scelerisque, felis dignissim rutrum tempor, neque risus 
-						sagittis mi, ac aliquam est massa eget lectus. Class aptent taciti sociosqu ad litora torquent 
-						per conubia nostra, per inceptos himenaeos. Ut pretium adipiscing ipsum, id iaculis quam mattis 
-						et. Cras mollis eleifend tortor, ut venenatis turpis pulvinar id. In hac habitasse platea 
-						dictumst. Pellentesque feugiat mi sit amet ligula convallis rhoncus fermentum sem aliquam. 
-						Vivamus egestas justo ac nisl facilisis sed aliquam mi ultrices. Suspendisse potenti. Sed 
-						elementum blandit nisl eu tempus.
+                    <p class="h1">
+                        Welcome!
+                    </p>
+                    <p class="content">
+						Welcome to the home of NDH Apps! Keep an eye out for first app, CamRub, which should be hitting the App Store soon!
 					</p>
-					<p class="content-text">
-						Nulla egestas facilisis ipsum sit amet semper. Curabitur leo ante, scelerisque ut ornare ac, 
-						egestas sit amet nunc. Aenean eget scelerisque lorem. Donec sapien felis, aliquam id vehicula 
-						sit amet, posuere venenatis urna. Aenean at dui libero. Nullam interdum molestie sem, vitae 
-						egestas augue pretium at. Duis erat erat, ultrices eu accumsan vitae, consectetur quis orci.
+                    <p class="h2">
+                    CamRub
+                    </p>
+                    <p class="content">
+                    CamRub is a new photography app which allows you to "rub," or draw on a camera view to capture portions of the image. Make unique drawings, create collages, or just play around to see what else you can come up with– your imagination is the only limit! When you're done, save your creations to your camera roll or share them on Facebook, Twitter, Instagram, and Messages.
 					</p>
-					<p class="content-text">
-						Etiam vulputate pellentesque lacus ac ullamcorper. Vestibulum ac semper lacus. Nunc id accumsan 
-						lectus. Sed lacinia dui vel nisi tincidunt vitae varius nunc tincidunt. In hac habitasse platea 
-						dictumst. Vestibulum purus sapien, eleifend quis commodo sed, euismod non velit. Morbi magna nisl, 
-						tincidunt sed pretium ut, consequat sed nunc. Cras at diam est, nec consectetur nisi. Nulla ante 
-						arcu, laoreet nec volutpat ut, malesuada quis velit.
-					</p>
+					<p class="h3">
+                        Screenshots
+                    </p>
 				</div>
+                
+                <div class="device">
+                    <a class="arrow-left" href="#"></a>
+                    <a class="arrow-right" href="#"></a>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"> <img src="img/Screenshot1.png" width="214px" height="379px"> </div>
+                            <div class="swiper-slide"> <img src="img/Screenshot2.png" width="214px" height="379px"> </div>
+                            <div class="swiper-slide"> <img src="img/Screenshot3.png" width="214px" height="379px"> </div>
+                            <div class="swiper-slide"> <img src="img/Screenshot4.png" width="214px" height="379px"> </div>
+                            <div class="swiper-slide"> <img src="img/Screenshot5.png" width="214px" height="379px"> </div>
+                            <div class="swiper-slide"> <img src="img/Screenshot6.png" width="214px" height="379px"> </div>
+                            <div class="swiper-slide"> <img src="img/Screenshot7.png" width="214px" height="379px"> </div>
+                        </div>
+                    </div>
+                    <div class="pagination"></div>
+                </div>
+                
+                <div class="footer">
+                    Copyright &#0169; 2014 NDH Apps. All rights reserved.
 			</div>
 		</div>
 		
+        <script src="js/jquery-1.10.1.min.js"></script>
+        <script src="js/idangerous.swiper-2.1.min.js"></script>
+        <script>
+            var mySwiper = new Swiper('.swiper-container',{
+                                      pagination: '.pagination',
+                                      loop:false,
+                                      grabCursor: true,
+                                      paginationClickable: true
+                                      })
+                                      $('.arrow-left').on('click', function(e){
+                                                          e.preventDefault()
+                                                          mySwiper.swipePrev()
+                                                          })
+                                                          $('.arrow-right').on('click', function(e){
+                                                                               e.preventDefault()
+                                                                               mySwiper.swipeNext()
+                                                                               })
+            </script>
 		<script>
 		(function () {
 		
