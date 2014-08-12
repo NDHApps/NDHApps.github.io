@@ -1,35 +1,200 @@
-<!DOCTYPE html>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-53618710-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-<style>
-	#scroll {width:window.outerWidth; height:600px; margin:50px auto; background-color:#ffffff; overflow:auto; white-space:nowrap; color:#ffffff; font-size:50%;}
-	#scroll img {margin:16px 0 0 20px;}
-	body {background-color:#7B81BF; text-align:center; font-family:sans-serif; font-size:300%;}
-	h1 {font-size:150%; color:#ffffff;}
-	a:link {color: #ffffff; text-decoration: none;}
-	a:visited {color: #ffffff; text-decoration: none;}
-	a:hover {color: #bababa; text-decoration: none;}
-	a:active {color: #ffffff; text-decoration: none;}
-</style>
-<head>	
-        <title>NDH Apps - Home</title>
-</head>
-<h1>
-	NDH Apps
-</h1>
-<body>
-	<p>Welcome to the home of NDH Apps! Keep an eye out for first app, CamRub, which should be hitting the App Store soon!</p>
-
-	<div id="scroll"><img src="./images/Screenshot1.png"><img src="./images/Screenshot2.png"><img src="./images/Screenshot3.png"><img src="./images/Screenshot4.png"><img src="./images/Screenshot5.png"><img src="./images/Screenshot6.png"><img src="./images/Screenshot7.png">...
-	</div>
-
-	<p>For more information or support, <a href="mailto:ndhapps@gmail.com">email us</a> or <a href="https://twitter.com/CamRubApp">follow us on Twitter</a>.</p>
-</body>
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+            <title>NDH Apps – Home</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/menu.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/idangerous.swiper.css">
+        <style>
+        .device {
+            width: 300px;
+            height: 544px;
+            padding: 10px;
+            background: #886CAF url(img/iphone.png) no-repeat center center;
+            margin: 5px auto;
+            position: relative;
+        }
+        .device .arrow-left {
+            background: url(img/arrows.png) no-repeat left top;
+            position: absolute;
+            left: 0px;
+            top: 45%;
+            margin-top: -15px;
+            width: 17px;
+            height: 30px;
+        }
+        .device .arrow-right {
+            background: url(img/arrows.png) no-repeat left bottom;
+            position: absolute;
+            right: 0px;
+            top: 45%;
+            margin-top: -15px;
+            width: 17px;
+            height: 30px;
+        }
+        .swiper-container {
+            height: 355px;
+            width: 200px;
+            top: 12.3%;
+        }
+        .content-slide {
+            padding: 20px;
+            color: #fff;
+        }
+        .title {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .pagination {
+            position: absolute;
+            left: 0;
+            text-align: center;
+            bottom:10px;
+            width: 100%;
+        }
+        .swiper-pagination-switch {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background: #999;
+            box-shadow: 0px 1px 2px #555 inset;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+        .swiper-active-switch {
+            background: #fff;
+        }
+        </style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<a href="http://NDHApps.com" target="_blank">
+					<img src="img/logo.png" width="200px" height="50px" alt="NDH Apps" class="logo-img">
+				</a>
+			</div>
+            
+            <!-- Nav -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="">Home</a></li>
+                    <li class="nav-item"><a href="#">About</a></li>
+                    <li class="nav-item"><a href="GetCamRub.html">Get CamRub</a></li>
+                    <li class="nav-item"><a href="https://twitter.com/CamRubApp">Twitter</a></li>
+                    <li class="nav-item"><a href="mailto:ndhapps@gmail.com">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- /Nav -->
+            
+		</div>
+		
+		<div class="wrapper">
+			<div class="main">
+				
+				<div class="content">
+                    <p class="h1">
+                        Welcome!
+                    </p>
+                    <p class="content">
+						Welcome to the home of NDH Apps! Keep an eye out for first app, CamRub, which should be hitting the App Store soon!
+					</p>
+                    <p class="h2">
+                    CamRub
+                    </p>
+                    <p class="content">
+                    CamRub is a new photography app which allows you to "rub," or draw on a camera view to capture portions of the image. Make unique drawings, create collages, or just play around to see what else you can come up with– your imagination is the only limit! When you're done, save your creations to your camera roll or share them on Facebook, Twitter, Instagram, and Messages.
+					</p>
+//					<p class="h3">
+//                        Screenshots
+//                    </p>
+				</div>
+                
+                <div class="device">
+                    <a class="arrow-left" href="#"></a>
+                    <a class="arrow-right" href="#"></a>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"> <img src="img/Screenshot1.png" width="200px" height="355px"> </div>
+                            <div class="swiper-slide"> <img src="img/Screenshot2.png" width="200px" height="355px"> </div>
+                            <div class="swiper-slide"> <img src="img/Screenshot3.png" width="200px" height="355px"> </div>
+                            <div class="swiper-slide"> <img src="img/Screenshot4.png" width="200px" height="355px"> </div>
+                            <div class="swiper-slide"> <img src="img/Screenshot5.png" width="200px" height="355px"> </div>
+                            <div class="swiper-slide"> <img src="img/Screenshot6.png" width="200px" height="355px"> </div>
+                            <div class="swiper-slide"> <img src="img/Screenshot7.png" width="200px" height="355px"> </div>
+                        </div>
+                    </div>
+                    <div class="pagination"></div>
+                </div>
+                
+                <div class="footer">
+                    Copyright &#0169; 2014 NDH Apps. All rights reserved.
+			</div>
+		</div>
+		
+        <script src="js/jquery-1.10.1.min.js"></script>
+        <script src="js/idangerous.swiper-2.1.min.js"></script>
+        <script>
+            var mySwiper = new Swiper('.swiper-container',{
+                                      pagination: '.pagination',
+                                      loop:false,
+                                      grabCursor: true,
+                                      paginationClickable: true
+                                      })
+                                      $('.arrow-left').on('click', function(e){
+                                                          e.preventDefault()
+                                                          mySwiper.swipePrev()
+                                                          })
+                                                          $('.arrow-right').on('click', function(e){
+                                                                               e.preventDefault()
+                                                                               mySwiper.swipeNext()
+                                                                               })
+            </script>
+		<script>
+		(function () {
+		
+		    // Create mobile element
+		    var mobile = document.createElement('div');
+		    mobile.className = 'nav-mobile';
+		    document.querySelector('.nav').appendChild(mobile);
+		
+		    // hasClass
+		    function hasClass(elem, className) {
+		        return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+		    }
+		
+		    // toggleClass
+		    function toggleClass(elem, className) {
+		        var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+		        if (hasClass(elem, className)) {
+		            while (newClass.indexOf(' ' + className + ' ') >= 0) {
+		                newClass = newClass.replace(' ' + className + ' ', ' ');
+		            }
+		            elem.className = newClass.replace(/^\s+|\s+$/g, '');
+		        } else {
+		            elem.className += ' ' + className;
+		        }
+		    }
+		
+		    // Mobile nav function
+		    var mobileNav = document.querySelector('.nav-mobile');
+		    var toggle = document.querySelector('.nav-list');
+		    mobileNav.onclick = function () {
+		        toggleClass(this, 'nav-mobile-open');
+		        toggleClass(toggle, 'nav-active');
+		    };
+		})();
+		</script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+             ga('create', 'UA-53618710-1', 'auto');
+             ga('send', 'pageview');
+        </script>
+	
+	</body>
+</html>
