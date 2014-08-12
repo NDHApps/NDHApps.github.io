@@ -119,6 +119,6 @@ ol {
 		-webkit-border-radius:5px 5px 0 0;
 		-moz-border-radius:5px 5px 0 0;
         height:60px;
-        background:#886CAF url(../img/nav-open.svg) no-repeat center 16px;
+        background:#886CAF url(../img/nav-open.svg) no-repeat center center;
 	}
 }
