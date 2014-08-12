@@ -41,7 +41,7 @@ ol {
 	position:relative;
 	display:inline-block;
 	font-size:14px;
-	font-weight:900;
+	font-weight:500;
 }
 .nav-list {
 	
@@ -95,6 +95,7 @@ ol {
 	}
 	.nav-list {
 		display:none;
+        padding:10px 0 0;
 	}
 	.nav-item {
 		width:100%;
@@ -117,5 +118,7 @@ ol {
 		border-radius:5px 5px 0 0;
 		-webkit-border-radius:5px 5px 0 0;
 		-moz-border-radius:5px 5px 0 0;
+        height:60px;
+        background:#886CAF url(../img/nav-open.svg) no-repeat center 16px;
 	}
 }
