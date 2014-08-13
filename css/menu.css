@@ -7,16 +7,16 @@
     Responsive Navigation
 \*------------------------------------*/
 body {
-	background:#886CAF;
+	background:#7a82bf;
 }
 a,
 a:link {
-    color: #3dffa1;
+    color: #99e9ff;
     text-decoration: none;
 }
 a:hover,
 a:active {
-    color: #5ec4ff;
+    color: #79b6cb;
     text-decoration: none;
 }
 ul,
@@ -61,7 +61,7 @@ ol {
 	display:block;
 	padding:13px 19px;
 	color:#FFF;
-	background:#886CAF;
+	background:#80c788;
 }
 .nav-item:first-child a {
 	border-radius:5px 0 0 5px;
@@ -70,7 +70,7 @@ ol {
 	border-radius:0 5px 5px 0;
 }
 .nav-item a:hover {
-	background:#634F80;
+	background:#537f56;
 }
 /* Mobile Navigation */
 .nav-mobile {
@@ -79,7 +79,7 @@ ol {
 	position:absolute;
 	top:-55px;
 	right:0;
-	background:#886CAF url(../img/nav.svg) no-repeat center center;
+	background:#80c788 url(../img/nav.svg) no-repeat center center;
 	height:50px;
 	width:50px;
 	border-radius:5px;
@@ -108,7 +108,7 @@ ol {
 		float:none;
 	}
 	.nav-item a {
-		background:#886CAF;
+		background:#80c788;
 		padding:10px;
 	}
 	.nav-item:first-child a {
@@ -125,6 +125,6 @@ ol {
 		-webkit-border-radius:5px 5px 0 0;
 		-moz-border-radius:5px 5px 0 0;
         height:60px;
-        background:#886CAF url(../img/nav-open.svg) no-repeat center center;
+        background:#80c788 url(../img/nav-open.svg) no-repeat center center;
 	}
 }
