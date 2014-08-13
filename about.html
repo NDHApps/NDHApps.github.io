@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+            <title>NDH Apps – About</title>
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <link href="css/main.css" rel="stylesheet">
+            <link href="css/menu.css" rel="stylesheet">
+    </head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<a href="./index.html" target="_blank">
+					<img src="img/logo.png" width="200px" height="50px" alt="NDH Apps" class="logo-img">
+                        </a>
+			</div>
+            
+            <!-- Nav -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="./index.html">Home</a></li>
+                    <li class="nav-item"><a href="">About</a></li>
+                    <li class="nav-item"><a href="./GetCamRub.html">Get CamRub</a></li>
+                    <li class="nav-item"><a href="https://twitter.com/CamRubApp">Twitter</a></li>
+                    <li class="nav-item"><a href="mailto:ndhapps@gmail.com">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- /Nav -->
+            
+		</div>
+		
+		<div class="wrapper">
+			<div class="main">
+				
+				<div class="content">
+                    <p class="h1">
+                        About NDH Apps
+                    </p>
+                    <p class="content">
+                        NDH Apps was founded in 2013 by <a href="https://www.linkedin.com/profile/view?id=317621319">Nicholas Daniel Hall</a> and released its first app, <a href="GetCamRub.html">CamRub</a>, in 2014. Nick is currently pursuing a Bachelor of Science in Computer Science at Northwestern University in Evanston, IL and hopes to pursue a career in mobile development.
+					</p>
+                    <p class="h1">
+                        CamRub
+                    </p>
+                    <p class="content">
+                        CamRub is a new photography app which allows you to "rub," or draw on a camera view to capture portions of the image. Make unique drawings, create collages, or just play around to see what else you can come up with– your imagination is the only limit! When you're done, save your creations to your camera roll or share them on Facebook, Twitter, Instagram, and Messages.
+					</p>
+
+				</div>
+            </div>
+            
+            <div class="footer">
+                Copyright &#0169; 2014 NDH Apps. All rights reserved.
+            </div>
+        </div>
+            
+        <script>
+            (function () {
+             
+             // Create mobile element
+             var mobile = document.createElement('div');
+             mobile.className = 'nav-mobile';
+             document.querySelector('.nav').appendChild(mobile);
+             
+             // hasClass
+             function hasClass(elem, className) {
+             return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+             }
+             
+             // toggleClass
+             function toggleClass(elem, className) {
+             var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+             if (hasClass(elem, className)) {
+             while (newClass.indexOf(' ' + className + ' ') >= 0) {
+             newClass = newClass.replace(' ' + className + ' ', ' ');
+             }
+             elem.className = newClass.replace(/^\s+|\s+$/g, '');
+             } else {
+             elem.className += ' ' + className;
+             }
+             }
+             
+             // Mobile nav function
+             var mobileNav = document.querySelector('.nav-mobile');
+             var toggle = document.querySelector('.nav-list');
+             mobileNav.onclick = function () {
+             toggleClass(this, 'nav-mobile-open');
+             toggleClass(toggle, 'nav-active');
+             };
+             })();
+        </script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+             ga('create', 'UA-53618710-1', 'auto');
+             ga('send', 'pageview');
+        </script>
+            
+            </body>
+</html>
