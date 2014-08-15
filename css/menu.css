@@ -54,7 +54,7 @@ ol {
 }
 .nav-item {
 	float:left;
-	*display:inline;
+	display:inline;
 	zoom:1;
 }
 .nav-item a {
