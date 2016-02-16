@@ -1,0 +1,55 @@
+body {
+	background-color: #A9A9A9;
+}
+.calc-display {
+	width: 346px;
+	height: 80px;
+	padding: 8px 36px;
+	background-color: #ecfcbc;
+	border-radius: 10px;
+	border: 2px solid #616161;
+	margin: 5px 1px 15px 1px;
+	position: relative;
+	text-align: right;
+	resize: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	box-shadow: inset 0 1px 3px #000, 0 3px 3px #ebebeb;
+	font: 24px 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+.btn {
+	width: 80px;
+	height: 48px;
+	padding: 10px 0px;
+	background-color: #C9C9C9;
+	border-radius: 10px;
+	border: 1px solid #616161;
+	margin: 6px 2px;
+	position: relative;
+	box-shadow: inset 0 3px 3px #ebebeb, 0 1px 3px #000000;
+	font: 22px 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+button:focus {
+	outline:0;
+}
+textarea {
+	cursor:default;
+}
+textarea:focus {
+	outline:0;
+}
+.btn:active {
+	background-color: #A5A5A5;
+	box-shadow: inset 0 1px 3px #000000, 0 1px 3px #ebebeb;
+}
+.btn-wide {
+	width: 168px;
+}
+.btn-tall {
+	height: 108px;
+	margin: -55px 0px 0px 266px;
+}
+.last-row {
+	margin: -55px 0px 0px 0px;
+}
