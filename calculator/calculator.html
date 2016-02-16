@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<div>
-			<textarea readonly="readonly" class="calc-display">4,856,995.2</textarea>
+			<textarea readonly="readonly" class="calc-display">0</textarea>
 		</div>
 		<div>
 			<button class="btn" type="button">MC</button>
@@ -14,34 +14,36 @@
 			<button class="btn" type="button">MR</button>		
 		</div>
 		<div>
-			<button class="btn" type="button">C</button>
-			<button class="btn" type="button">&plusmn;</button>
-			<button class="btn" type="button">&divide;</button>
-			<button class="btn" type="button">&times;</button>
+			<button class="btn" id="clear" type="button">C</button>
+			<button class="btn" id="pm" type="button">&plusmn;</button>
+			<button class="btn op" id="divide" type="button">&divide;</button>
+			<button class="btn op" id="times" type="button">&times;</button>
 		</div>
 		<div>
-			<button class="btn" type="button">7</button>
-			<button class="btn" type="button">8</button>
-			<button class="btn" type="button">9</button>
-			<button class="btn" type="button">&minus;</button>
+			<button class="btn num" id="7" type="button">7</button>
+			<button class="btn num" id="8" type="button">8</button>
+			<button class="btn num" id="9" type="button">9</button>
+			<button class="btn op" id="minus" type="button">&minus;</button>
 		</div>
 		<div>
-			<button class="btn" type="button">4</button>
-			<button class="btn" type="button">5</button>
-			<button class="btn" type="button">6</button>
-			<button class="btn" type="button">&plus;</button>
+			<button class="btn num" id="4" type="button">4</button>
+			<button class="btn num" id="5" type="button">5</button>
+			<button class="btn num" id="6" type="button">6</button>
+			<button class="btn op" id="plus" type="button">&plus;</button>
 		</div>
 		<div>
-			<button class="btn" type="button">1</button>
-			<button class="btn" type="button">2</button>
-			<button class="btn" type="button">3</button>
+			<button class="btn num" id="1" type="button">1</button>
+			<button class="btn num" id="2" type="button">2</button>
+			<button class="btn num" id="3" type="button">3</button>
 		</div>
 		<div class="split-row">
-			<button class="btn btn-tall" type="button"><br><br>=</button>
+			<button class="btn btn-tall op" id="eq" type="button"><br><br>=</button>
 		</div>
 		<div class="last-row">
-			<button class="btn btn-wide" type="button">0</button>
-			<button class="btn" type="button">.</button>
+			<button class="btn btn-wide num" id="0" type="button">0</button>
+			<button class="btn" id="dec" type="button">.</button>
 		</div>
-	</body> 
+	</body>
+	<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="calculator.js"></script>
 </html>
