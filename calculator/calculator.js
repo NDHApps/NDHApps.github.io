@@ -2,67 +2,99 @@ $(document).ready(function(){
 	var value = 0;
 	var cur_val = 0;
 	var cur_val_set = false;
+	var vals_set = 0;
 	var decimal = 0;
 	var last_op = "none";
 	var symbol = "";
+	var mem = 0;
 	$('#clear').click(function() {
 		value = cur_val = decimal = 0;
 		symbol = "";
 		update_display();
 		last_op="none";
 		cur_val_set = false;
+		vals_set = 0;
 	});
 	$('#dec').click(function() {
+		if (last_op == "eq" && !cur_val_set) {
+			value = cur_val = decimal = 0;
+			symbol = "";
+			last_op="none";
+			vals_set = 0;
+		}
 		if (!decimal) {
 			decimal = 1;
 			update_display();
 		}
-		cur_val_set = true;
+		if (!cur_val_set) {
+			vals_set += 1;
+			cur_val_set = true;
+		}
 	});
 	$('.op').click(function() {
 		var op = this.id;
 		value = parseFloat(value);
-		switch(last_op) {
-			case "none":
+		if (vals_set == 2) {
+			switch(last_op) {
+				case "plus":
+					value += cur_val;
+					break;
+				case "minus":
+					value -= cur_val;
+					break;
+				case "times":
+					value *= cur_val;
+					break;
+				case "divide":
+					if (cur_val != 0) {
+						value /= cur_val;
+					} else {
+						value = cur_val = decimal = 0;
+						symbol = "";
+						$("textarea.calc-display").text("Not a number");
+						last_op="none";
+						cur_val_set = false;
+						vals_set = 0;
+						return;
+					}
+					break;
+				default:
+					break;
+			}
+			last_op = "none";
+			vals_set = 1;
+		} else if (vals_set == 1) {
+			if (last_op == "none") {
 				value = cur_val;
-				break;
-			case "plus":
-				if (cur_val_set) {
-				   value += cur_val;
-				} else {
-				   value = value + value;
+			}
+			if (op == "eq") {
+				switch(last_op) {
+					case "plus":
+						value = value + value;
+						break;
+					case "minus":
+						value = value - value;
+						break;
+					case "times":
+						value = value * value;
+						break;
+					case "divide":
+						if (value == 0) {
+						   value = cur_val = decimal = 0;
+						   symbol = "";
+						   $("textarea.calc-display").text("Not a number");
+						   last_op="none";
+						   cur_val_set = false;
+						   vals_set = 0;
+						   return;
+						} else {
+						   value = value / value;
+						}
+						break;
+					default:
+						break;
 				}
-				break;
-			case "minus":
-				if (cur_val_set) {
-				   value -= cur_val;
-				} else {
-				   value = value - value;
-				}
-				break;
-			case "times":
-				if (cur_val_set) {
-				   value *= cur_val;
-				} else {
-				   value = value * value;
-				}
-				break;
-			case "divide":
-				if (cur_val_set && cur_val != 0) {
-				   value /= cur_val;
-				} else if (cur_val == 0) {
-				   value = cur_val = decimal = 0;
-				   symbol = "";
-				   $("textarea.calc-display").text("Not a number");
-				   last_op="none";
-				   cur_val_set = false;
-				   return;
-				} else {
-				   value = value / value;
-				}
-				break;
-			default:
-				break;
+			}
 		}
 		switch(op) {
 			case "plus":
@@ -83,14 +115,27 @@ $(document).ready(function(){
 		}
 		last_op = op;
 		$("textarea.calc-display").html(value.toString()+symbol);
-		cur_val = decimal = 0;
-		cur_val_set = false;
+		if (cur_val_set) {
+			cur_val = decimal = 0;
+			cur_val_set = false;
+		}
 	});
 	$('#pm').click(function() {
-		cur_val *= -1;
-		update_display();
+		if (cur_val_set) {
+			cur_val *= -1;
+			update_display();
+		} else {
+			value *= -1;
+			$("textarea.calc-display").html(value.toString()+symbol);
+		}
 	});
 	$('.num').click(function() {
+		if (last_op == "eq" && !cur_val_set) {
+			value = cur_val = decimal = 0;
+			symbol = "";
+			last_op="none";
+			vals_set = 0;
+		}
 		var digit = parseInt(this.id);
 		if (decimal) {
 			cur_val = parseFloat(cur_val);
@@ -101,7 +146,36 @@ $(document).ready(function(){
 			cur_val = cur_val * 10 + digit;
 		}
 		update_display();
-		cur_val_set = true;
+		if (!cur_val_set) {
+			vals_set += 1;
+			cur_val_set = true;
+		}
+	});
+	$('#mc').click(function() {
+		mem = 0;
+	});
+	$('#mplus').click(function() {
+		if (cur_val_set) {
+			mem += cur_val;
+		} else {
+			mem += value;
+		}
+	});
+	$('#mminus').click(function() {
+		if (cur_val_set) {
+			mem -= cur_val;
+		} else {
+			mem -= value;
+		}
+	});
+	$('#mr').click(function() {
+		cur_val = decimal = 0;
+		symbol = "";
+		value = mem;
+		$("textarea.calc-display").html(value.toString()+symbol);
+		last_op="eq";
+		cur_val_set = false;
+		vals_set = 1;
 	});
 	function update_display() {
 		if (decimal==1) {
