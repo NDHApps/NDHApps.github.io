@@ -31,6 +31,63 @@ $(document).ready(function(){
 			cur_val_set = true;
 		}
 	});
+	$('#pm').click(function() {
+		if (cur_val_set) {
+			cur_val *= -1;
+			update_display();
+		} else {
+			value *= -1;
+			$("textarea.calc-display").html(value.toString()+symbol);
+		}
+	});
+	$('.num').click(function() {
+		if (last_op == "eq" && !cur_val_set) {
+			value = cur_val = decimal = 0;
+			symbol = "";
+			last_op="none";
+			vals_set = 0;
+		}
+		var digit = parseInt(this.id);
+		if (decimal) {
+			cur_val = parseFloat(cur_val);
+			cur_val += digit * Math.pow(10, -decimal);
+			cur_val = cur_val.toFixed(decimal);
+			decimal += 1;
+		} else {
+			cur_val = cur_val * 10 + digit;
+		}
+		update_display();
+		if (!cur_val_set) {
+			vals_set += 1;
+			cur_val_set = true;
+		}
+	});
+	$('#mc').click(function() {
+		mem = 0;
+	});
+	$('#mplus').click(function() {
+		if (cur_val_set) {
+			mem += cur_val;
+		} else {
+			mem += value;
+		}
+	});
+	$('#mminus').click(function() {
+		if (cur_val_set) {
+			mem -= cur_val;
+		} else {
+			mem -= value;
+		}
+	});
+	$('#mr').click(function() {
+		cur_val = decimal = 0;
+		symbol = "";
+		value = mem;
+		$("textarea.calc-display").html(value.toString()+symbol);
+		last_op="eq";
+		cur_val_set = false;
+		vals_set = 1;
+	});
 	$('.op').click(function() {
 		var op = this.id;
 		value = parseFloat(value);
@@ -119,63 +176,6 @@ $(document).ready(function(){
 			cur_val = decimal = 0;
 			cur_val_set = false;
 		}
-	});
-	$('#pm').click(function() {
-		if (cur_val_set) {
-			cur_val *= -1;
-			update_display();
-		} else {
-			value *= -1;
-			$("textarea.calc-display").html(value.toString()+symbol);
-		}
-	});
-	$('.num').click(function() {
-		if (last_op == "eq" && !cur_val_set) {
-			value = cur_val = decimal = 0;
-			symbol = "";
-			last_op="none";
-			vals_set = 0;
-		}
-		var digit = parseInt(this.id);
-		if (decimal) {
-			cur_val = parseFloat(cur_val);
-			cur_val += digit * Math.pow(10, -decimal);
-			cur_val = cur_val.toFixed(decimal);
-			decimal += 1;
-		} else {
-			cur_val = cur_val * 10 + digit;
-		}
-		update_display();
-		if (!cur_val_set) {
-			vals_set += 1;
-			cur_val_set = true;
-		}
-	});
-	$('#mc').click(function() {
-		mem = 0;
-	});
-	$('#mplus').click(function() {
-		if (cur_val_set) {
-			mem += cur_val;
-		} else {
-			mem += value;
-		}
-	});
-	$('#mminus').click(function() {
-		if (cur_val_set) {
-			mem -= cur_val;
-		} else {
-			mem -= value;
-		}
-	});
-	$('#mr').click(function() {
-		cur_val = decimal = 0;
-		symbol = "";
-		value = mem;
-		$("textarea.calc-display").html(value.toString()+symbol);
-		last_op="eq";
-		cur_val_set = false;
-		vals_set = 1;
 	});
 	function update_display() {
 		if (decimal==1) {
