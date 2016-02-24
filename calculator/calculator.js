@@ -94,17 +94,17 @@ $(document).ready(function(){
 		if (vals_set == 2) {
 			switch(last_op) {
 				case "plus":
-					value += cur_val;
+					value += parseFloat(cur_val);
 					break;
 				case "minus":
-					value -= cur_val;
+					value -= parseFloat(cur_val);
 					break;
 				case "times":
-					value *= cur_val;
+					value *= parseFloat(cur_val);
 					break;
 				case "divide":
 					if (cur_val != 0) {
-						value /= cur_val;
+						value /= parseFloat(cur_val);
 					} else {
 						value = cur_val = decimal = 0;
 						symbol = "";
@@ -122,9 +122,10 @@ $(document).ready(function(){
 			vals_set = 1;
 		} else if (vals_set == 1) {
 			if (last_op == "none") {
-				value = cur_val;
+				value = parseFloat(cur_val);
 			}
 			if (op == "eq") {
+				value = parseFloat(value);
 				switch(last_op) {
 					case "plus":
 						value = value + value;
