@@ -1,0 +1,209 @@
+
+body.splash {
+	height: 100%;
+	background: white;
+ 	background-repeat: no-repeat;
+}
+
+.page-title {
+	font-size: 24px;
+}
+
+input[type=text]:focus {
+	border-bottom: 1px solid orange;
+	-webkit-box-shadow: 0 1px 0 0 orange;
+	-moz-box-shadow: 0 1px 0 0 orange;
+	box-shadow: 0 1px 0 0 orange;
+}
+
+div.center {
+	position: relative;
+	margin: 10% auto;
+	left: 0;
+	width: 50%;
+	height: auto;
+}
+
+div.center.log {
+	width: 200px;
+}
+
+
+#titleBox {
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 3%;
+}
+
+#questionBox {
+	background: #ffffff;
+	height: 75%;
+	width: 42.5%;
+	margin-left: 5%;
+	margin-right: 5%;
+	display: inline-block;
+	overflow: auto;
+}
+
+#candidateBox {
+	background: black;
+	height: 75%;
+	width: 42.5%;
+	display: inline-block;
+	overflow: auto;
+}
+
+#politicalSlider {
+	background: linear-gradient(to right, blue,white,red);
+	height: 10px;
+	width: 80%;
+	margin-top: 1%;
+	margin-left: 10%;
+}
+
+.question {
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.qSlider {
+	width: 90%;
+	margin-top: 5px;
+	margin-left: 5%;
+}
+
+#candidateBoxHeader{
+	color: white;
+	text-align: center;
+	font-size: 30px;
+}
+
+#candidate1 {
+	background-color: white;
+	width: 60%;
+	height: 40%;
+	margin: 5%;
+	margin-left: 20%;
+}
+
+#image1 {
+	width: 100%;
+	height: 91%;
+	display: block;
+	margin-bottom: 0%;
+}
+
+#txt1 {
+	text-align: center;
+}
+
+#runnerUpBox {
+	height: 20%;
+}
+
+.runnerUp {
+	display: inline-block;
+	width: 25%;
+	margin-left: 5%;
+	background-color: white;
+	padding-bottom: 0%;
+}
+
+.smallImage {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 0%;
+}
+
+.smallText {
+	text-align: center;
+}
+
+#moreCandidatesButton {
+	width: 45px;
+	color: white;
+	text-decoration: underline;
+	margin: 5%;
+	cursor: pointer;
+}
+
+.qLink {
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: bottom;
+	text-decoration: underline;
+}
+
+.Q {
+	display: inline-block;
+	width: 80%;
+	margin-right: 3%;
+}
+
+#sliderText {
+	margin-top: 2%;
+	text-align: center;
+	font-size: 20px;
+}
+
+
+#candidateBox {
+	background: linear-gradient(#d9d9d9, #8c8c8c);;
+	height: 68%;
+	width: 42.5%;
+	display: inline-block;
+	overflow: auto;
+	vertical-align: top;
+}
+
+#infoBox {
+	background: #ffffff;
+	height: 100%;
+	width: 42.5%;
+	margin-left: 5%;
+	margin-right: 5%;
+	display: inline-block;
+	overflow: auto;
+}
+
+#titleBox {
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 3%;
+}
+
+
+#image1 {
+	width: 100%;
+	height: 91%;
+	display: block;
+	margin-bottom: 0%;
+	margin-top: 5%;
+}
+
+.issueTitle {
+	font-size: 20px;
+	
+}
+
+.info {
+	padding-left: 0px;
+	font-size: 15px;
+}
+
+.politicalSlider {
+	background: linear-gradient(to right, blue,white,red);
+	height: 10px;
+	width: 44%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.sliderText {
+	
+}
+
+#sliders {
+	margin-top: -15%;
+}
