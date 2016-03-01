@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!---script src="calculator.js"></script--->
+<title>Election Quiz</title>
+<style>
+html{
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	background: linear-gradient(#d9d9d9, #8c8c8c);
+	background-repeat: no-repeat;
+}
+
+#titleBox {
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 3%;
+}
+
+#questionBox {
+	background: #ffffff;
+	height: 75%;
+	width: 42.5%;
+	margin-left: 5%;
+	margin-right: 5%;
+	display: inline-block;
+	overflow: auto;
+}
+
+#candidateBox {
+	background: black;
+	height: 75%;
+	width: 42.5%;
+	display: inline-block;
+	overflow: auto;
+}
+
+#politicalSlider {
+	background: linear-gradient(to right, blue,white,red);
+	height: 10px;
+	width: 80%;
+	margin-top: 1%;
+	margin-left: 10%;
+}
+
+.question {
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.qSlider {
+	width: 90%;
+	margin-top: 5px;
+	margin-left: 5%;
+}
+
+#candidateBoxHeader{
+	color: white;
+	text-align: center;
+	font-size: 30px;
+}
+
+#candidate1 {
+	background-color: white;
+	width: 60%;
+	height: 40%;
+	margin: 5%;
+	margin-left: 20%;
+}
+
+#image1 {
+	width: 100%;
+	height: 91%;
+	display: block;
+	margin-bottom: 0%;
+}
+
+#txt1 {
+	text-align: center;
+}
+
+#runnerUpBox {
+	height: 20%;
+}
+
+.runnerUp {
+	display: inline-block;
+	width: 25%;
+	margin-left: 5%;
+	background-color: white;
+	padding-bottom: 0%;
+}
+
+.smallImage {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 0%;
+}
+
+.smallText {
+	text-align: center;
+}
+
+#moreCandidatesButton {
+	width: 45px;
+	color: white;
+	text-decoration: underline;
+	margin: 5%;
+	cursor: pointer;
+}
+
+.qLink {
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: bottom;
+	text-decoration: underline;
+}
+
+.Q {
+	display: inline-block;
+	width: 80%;
+	margin-right: 3%;
+}
+
+#sliderText {
+	margin-top: 2%;
+	text-align: center;
+	font-size: 20px;
+}
+</style>
+</head>
+
+<body>
+	<div id="titleBox">Election Quiz</div>
+	<div id="questionBox">
+		<div class="question">
+			<div class="Q">This is question 1</div>
+			<div class="qLink">More...</div>
+			<input type="range" class="qSlider"></input>
+		</div>
+		<div class="question">
+			<div class="Q">This is question 2</div>
+			<div class="qLink">More...</div>
+			<input type="range" class="qSlider"></input>
+		</div>
+		<div class="question">
+			<div class="Q">This is question 3</div>
+			<div class="qLink">More...</div>
+			<input type="range" class="qSlider"></input>
+		</div>
+		<div class="question">
+			<div class="Q">This is question 4</div>
+			<div class="qLink">More...</div>
+			<input type="range" class="qSlider"></input>
+		</div>
+		<div class="question">
+			<div class="Q">This is question 5. Question 5 is really long to show text wrap</div>
+			<div class="qLink">More...</div>
+			<input type="range" class="qSlider"></input>
+		</div>
+		<div class="question">
+			<div class="Q">This is question 6</div>
+			<div class="qLink">More...</div>
+			<input type="range" class="qSlider"></input>
+		</div>
+		<div class="question">
+			<div class="Q">This is question 7</div>
+			<div class="qLink">More...</div>
+			<input type="range" class="qSlider"></input>
+		</div>
+		<div class="question">
+			<div class="Q">This is question 8</div>
+			<div class="qLink">More...</div>
+			<input type="range" class="qSlider"></input>
+		</div>
+	</div>
+	<div id="candidateBox">
+		<div id="candidateBoxHeader">Your Best Matches</div>
+		<div id="candidate1">
+			<div id="txt1">#1: Donald Trump</div>
+			<img src="http://static4.businessinsider.com/image/55918a4b6da811695ab77f22-480/rtx1gzco.jpg" id="image1"></img>
+		</div>
+		<div id="runnerUpBox">
+			<div id="candidate2" class="runnerUp">
+				<div class="smallText">#2</div>
+				<img src="http://i.telegraph.co.uk/multimedia/archive/02831/Clinton1web_2831249b.jpg" class="smallImage">
+			</div>
+			<div id="candidate2" class="runnerUp">
+				<div class="smallText">#3</div>
+				<img src="http://static.politifact.com.s3.amazonaws.com/politifact%2Fphotos%2Ftedcruzalexwonggettyimages032215.jpg" class="smallImage">
+			</div>
+			<div id="candidate2" class="runnerUp">
+				<div class="smallText">#4</div>
+				<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTSON74rmSeMpcDWIIulxdM-enTs2vJ5xizc1WPsIlCbh3_pdSp9g" class="smallImage">
+			</div>
+		</div>
+		<div id="moreCandidatesButton" class="link">More...</div>
+	</div>
+	<div id="sliderText">Where you are on the spectrum:</div>
+	<div id="politicalSlider"></div>
+</body>
+</html>
