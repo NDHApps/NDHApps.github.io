@@ -20,47 +20,14 @@ input[type=text]:focus {
 	box-shadow: 0 1px 0 0 orange;
 }
 
-button.enter {
-	background-color: lightgray;
-	opacity: 0.5;
-	border-radius: 8px;
-	width: 150px;
-	height: 45px;
-	margin: auto;
-	text-align: center;
-	font-size: 18px;
-	font-family: "Ariel", "Helvetica", sans-serif;
-}
-
-button:hover {
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-button:active {
-	opacity: 0.5;
-	border-style: inset gray;
-}
-
-button:focus {
-	outline: 0;
-}
-
 div.center {
-	position: absolute;
-	margin: auto;
-	top: 0;
-	right: 0;
-	bottom: 0;
+	position: relative;
+	margin: 10% auto;
 	left: 0;
-	width: 500px;
-	height: 100px;
+	width: 50%;
+	height: auto;
 }
 
 div.center.log {
 	width: 200px;
-}
-
-legend {
-	margin-bottom: 10px;
-	font-size: 20px;
 }
