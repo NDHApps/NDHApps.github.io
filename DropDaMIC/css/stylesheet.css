@@ -1,6 +1,10 @@
-/*html {
-    font-family: 'Raleway', sans-serif; 
-}*/
+.nav-item-wrapper {
+    width: 100%;
+    display: inline;
+}
+.nav-item {
+    float: left;
+}
    
 .nav-wrapper img {
     height: 56px;
