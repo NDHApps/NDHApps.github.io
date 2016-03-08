@@ -4,13 +4,12 @@
    
 .nav-wrapper img {
     height: 56px;
-    margin-left: 28px;
+    margin-left: 30px;
 }
 
 @media only screen and (min-width: 601px) {
     .nav-wrapper img {
         height: 64px;
-        margin-left: 32px;
     }
 }
 
