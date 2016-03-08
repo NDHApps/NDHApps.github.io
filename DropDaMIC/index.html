@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DropDa MIC (Musical Instrument Classifier)</title>
+        <link rel="stylesheet" type="text/css" href="css/materialize.css">
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body class="splash">
+        <header>
+            <nav class="top-nav">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="index.html" class="left brand-logo">
+                            <div class="valign-wrapper">
+                                <img src="logo.png">
+                                <div class="valign">
+                                    DropDa MIC 
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="#About">About</a></li>
+                            <li><a href="#Method">Method</a></li>
+                            <li><a href="#Results">Results</a></li>
+                            <li><a href="GitHub">GitHub</a></li>
+                        </ul>
+                        <ul class="side-nav" id="mobile-demo">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#About">About</a></li>
+                            <li><a href="#Method">Method</a></li>
+                            <li><a href="#Results">Results</a></li>
+                            <li><a href="GitHub">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="main container">
+            <div class="left">
+                <div class="section">
+                    <h4 class="header deep-purple-text">DropDa MIC (Musical Instrument Classifier)</h4>
+                    <h6>Final Project for EECS 352: Machine Perception of Music and Audio</h6>
+                    <h6>Northwestern University</h6>
+                    <h6>Professor Bryan Pardo</h6>
+                    <div class="row">
+                        <div class="col s12 m6 l4">
+                            <h5>Hannah Arntson</h5>
+                            <h6 class="truncate">HannahArntson2016@u.northwestern.edu</h6>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <h5>Nicholas Hall</h5>
+                            <h6 class="truncate">NicholasHall2016@u.northwestern.edu</h6>
+                        </div>
+                        <div class="col s12 m6 l4">
+                            <h5>Jason Lustbader</h5>
+                            <h6 class="truncate">JasonLustbader2016@u.northwestern.edu</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="section" id="About">
+                    <h4 class="deep-purple-text">About</h4>
+                    <h5>Motivation</h5>
+                    <div class="flow-text">
+                        We are all very musical and can easily tell the difference between different instruments and groupings of instruments. We think it would be interesting to teach a computer to make the same differentiations.
+                    </div>
+                    <h5>Description</h5>
+                    <div class="flow-text">
+                        Our team will be identifying the instruments used in various classical music recordings. We will create a system that can tell the difference between a solo piano, a solo horn, a string quartet, an entire orchestra, etc. We will take a .wav file as input. The user will specify the file either on the command line or as a website upload, depending of our final interface. The file will contain audio from a recording of a classical piece of music. The system will then compare the recording to the training samples and use K-nearest neighbors to identify the sample's instrumentation.
+                        <br><br>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="section" id="Method">
+                    <h4 class="deep-purple-text">Method</h4>
+                    <div class="flow-text">
+                        We used musical instrument samples from the <a href="http://theremin.music.uiowa.edu/MIS.html">University of Iowa Musical Instrument Samples (MIS)</a> dataset. We picked five (5) very different sounding instruments to put into our database: flute, bass clarinet, french horn, violin, and double bass. We then spliced these recordings into different frames and recorded selected features for each of these frames: discrete Fourier transform (DFT) magnitudes, mel-frequency cepstral coefficients (MFCCs), and energy changes from frame to frame. Next, we created a K-nearest neighbor classifier using <a href="http://scikit-learn.org/stable/">scikit-learn</a>. To evaluate our method we tested to see if we could correctly identify instruments using our training data as input, then using other solo recordings of these instruments as input, and finally using recordings of multiple instruments as input.
+                        <br><br>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="section" id="Results">
+                    <h4 class="deep-purple-text">Results</h4>
+                    <div class="flow-text">
+                        Lorem ipsum dolor sit amet, agam nostro commodo vix ex, sit id explicari instructior. At sed audiam corrumpit, option interesset ex vix. Sale laboramus ne qui. Ea per augue vivendum. No vel posse forensibus.
+                        <br><br>
+                        Ex intellegat maiestatis sea, no magna alterum tractatos eos. Id mei dicta percipitur, movet saperet efficiantur cu vel, ad veritus percipitur efficiendi eum. Et qui liberavisse definitiones, nam alii atomorum definiebas ei. An oratio forensibus persequeris eum, accumsan splendide eum et.
+                        <br><br>                        
+                        At est veniam audiam inermis. Epicuri probatus perfecto an per. Summo nostrum eu vel, ridens convenire temporibus qui an. Porro sonet vix ad, no populo accusamus dissentiunt vix.
+                        <br><br>
+                        Sea at novum ignota. Civibus mandamus ius ea, omnes eloquentiam id eum. Ei dolore dolorem delectus vim, ex summo docendi vel, eos deserunt abhorreant ei. In nec nonumy ridens audire, nec te alterum voluptua, id iusto intellegam est. Ceteros propriae at his, ad pri aliquam utroque, sit ei eripuit sapientem persequeris.
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+</html>

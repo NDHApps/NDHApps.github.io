@@ -1,0 +1,28 @@
+/*html {
+    font-family: 'Raleway', sans-serif; 
+}*/
+   
+.nav-wrapper img {
+    height: 56px;
+    margin-left: 28px;
+}
+
+@media only screen and (min-width: 601px) {
+    .nav-wrapper img {
+        height: 64px;
+        margin-left: 32px;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .nav-wrapper img {
+        height: 64px;
+        margin-left: -14px;
+    }
+}
+    
+.main {
+    position: relative;
+    margin-top: 12px !important;
+}
+    
