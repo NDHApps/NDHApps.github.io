@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="css/election_quiz.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script> 
+	<script src="js/bin/materialize.js"></script>
+    <script type="text/javascript" src="js/js.cookie.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
 </head>
 
 <body class="login">
@@ -21,13 +24,12 @@
 	<div class="center log">
 		<form action="action_page.php">
 		    	<h4 class="blue-text">Login</h4>
-		    	<input class="input-field" type="text" name="username" placeholder="Username" value=""><br>
-		    	<input class="input-field" type="text" name="password" placeholder="Password" value=""></br></br>
-
+		    	<input class="input-field required" id="username" type="text" name="username" placeholder="Username" value=""><br>
+		    	<input class="input-field required" id="password" type="password" name="password" placeholder="Password" value=""></br></br>
+            <btn class="waves-effect waves-light btn" id="submit">Login</btn>
 		</form>
-		<a class="waves-effect waves-light btn" href="quiz.html">Login</a>
 		</a>
 	</div>
-    <div class="center">Issue and candidate data gathered from the Bing Political Index.<br>&copy;2016 Hannah Arnston, Nicholas Hall, Craig Herdle, and Sam Schlesinger</div>
+    <div class="center">Issue and candidate data gathered from the Bing Political Index and OnTheIssues.org.<br>&copy;2016 Hannah Arnston, Nicholas Hall, Craig Herdle, and Sam Schlesinger</div>
 </body>
 </html>

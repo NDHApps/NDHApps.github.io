@@ -6,6 +6,10 @@ $(document).ready(function() {
         $("#spectrumMe").css("margin-left", "calc(" + mySpectrumScore + "% - 2px)");
     }
     
+    if(!Cookies.get('AdminUser')) {
+         $("#edit").hide();
+    }
+    
     var pageId = $("#pageName").text();
     console.log(Cookies.getJSON('MyMatchScores'));
     if(Cookies.getJSON('MyMatchScores')) {
