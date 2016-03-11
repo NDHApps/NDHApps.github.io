@@ -21,7 +21,11 @@ $(document).ready(function() {
     
     // Update scores when changed
     $('.question input[type=range]').on('input', function() {
-        myScores[$(this).attr('id').slice(1)] = parseInt($(this).val());
+        var rawScore = parseInt($(this).val());
+        if ($(this).hasClass('reverse-range')) {
+            rawScore *= -1;
+        }
+        myScores[$(this).attr('id').slice(1)] = rawScore;
         Cookies.set('ElectionQuizScores', myScores);
         updateMatchScores();
     });

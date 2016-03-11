@@ -46,10 +46,6 @@ div.center.log {
     display: none;
 }
 
-.reverse-range {
-    transform: rotateY(180deg);
-}
-
 #titleBox {
 	font-size: 50px;
 	text-align: center;

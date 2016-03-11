@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Election Quiz - Ted Cruz</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/election_quiz.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script> 
+	<script src="js/bin/materialize.js"></script>
+    <script type="text/javascript" src="js/js.cookie.js"></script>
+    <script type="text/javascript" src="js/candidate.js"></script>
+</head>
+
+<body class="quiz">
+	<header>
+		<nav class="top-nav">
+			<div class="container">
+				<div class="nav-wrapper">
+                    <div class="nav-item-wrapper">
+                        <a href="quiz.html" class="nav-item page-title">
+                            <i class="nav-item material-icons">keyboard_backspace</i>Election Quiz</a>
+                    </div>
+                </div>
+            </div>
+		</nav>
+	</header>
+    <div class="add-padding-top container">
+        <div class="row">
+            <div class="add-padding-right col s12 m5 l4">
+                <h4 id="pageName">Ted Cruz</h4>
+                <img class="picture responsive-img" src="image/cruz.jpg">
+                <h5 class="text-red">Republican</h5>
+                <h6>Texas Senator</h6>
+                <br>
+                <div class="score" id="matchScore">-</div>
+                <div id="sliderText2"><br>Cruz on the Spectrum</div>
+                <div id="politicalSlider"></div>
+                <div class="spectrumX spectrumCruz"></div>
+                <div class="h6 disagree">Progressive</div>
+                <div class="h6 neutral">Neutral</div>
+                <div class="h6 agree">Conservative</div>
+                <div id="sliderText2"><br>You on the Spectrum</div>
+                <div id="politicalSlider"></div>
+                <div class="spectrumX" id="spectrumMe"></div>
+                <div class="h6 disagree">Progressive</div>
+                <div class="h6 neutral">Neutral</div>
+                <div class="h6 agree">Conservative</div>
+            </div>
+            <div class="add-padding-left col s12 m7 l8">
+                <h4>&nbsp;</h4>
+                <h5>Cruz on the Issues</h5>
+                <div class="divider"></div>
+                <br>
+                <div class="issueTitle">Abortion
+                    <div class="info">
+                        <ul>
+                            <li>It's big government to intervene on woman's right to choose. (Oct 2015)</li>
+                            <li>Make abortion rare by supporting adoption & foster care. (Apr 2008)</li>
+                            <li>Lift ban on stem cell research to cure devastating diseases. (Jun 2007)</li>
+                            <li>Being pro-choice is not being pro-abortion. (Jan 1999)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="issueTitle">Budget and Economy
+                    <div class="info">
+                        <ul>
+                            <li>Go after shadow banking industry, like Lehman Brothers. (Nov 2015)</li>
+                            <li>We need bankruptcy reform, but we need the right kind. (Aug 2014)</li>
+                            <li>Pay down debt & cut taxes within balanced budget. (Sep 2000)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="issueTitle">Civil Rights
+                    <div class="info">
+                        <ul>
+                            <li>I re-evaluated & changed my mind on gay marriage. (Jun 2014)</li>
+                            <li>Equal pay is not yet equal. (Jan 2008)</li>
+                            <li>We’ve come a long way on race, but we have a long way to go. (Jun 2007)</li>
+                            <li>Women’s rights are human rights. (Dec 1999)</li>
+                        </ul>
+                    </div>	
+                </div>
+                <div class="issueTitle">Drugs
+                    <div class="info">
+                        <ul>
+                            <li>Brother died of alcoholism; so Donald never touched alcohol. (Jan 2016)</li>
+                            <li>Never touched drugs, nor alcohol, tobacco, or coffee. (Jul 2000)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="issueTitle">Education
+                    <div class="info">
+                        <ul>
+                            <li>Cut Department of Education and Common Core. (Oct 2015)</li>
+                            <li>School choice will improve public schools. (Jul 2000)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="issueTitle">Environment
+                    <div class="info">
+                        <ul>
+                            <li>Cut the EPA; what they do is a disgrace. (Oct 2015)</li>
+                            <li>Good development enhances the environment. (Jan 2008)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="issueTitle">Foreign Policy
+                    <div class="info">
+                        <ul>
+                            <li>Diplomacy and respect crucial to our relationship with Russia. (Sep 2015)</li>
+                            <li>Be tougher on China-we&#39re too eager to please. (Jul 2000)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="issueTitle">Gun Control
+                    <div class="info">
+                        <ul>
+                            <li>No limits on guns; they save lives. (Jan 2016)</li>
+                            <li>For assault weapon ban, waiting period, and background check. (Jul 2000)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="issueTitle">Health Care
+                    <div class="info">
+                        <ul>
+                            <li>Replace Obamacare with Health Savings Accounts. (Oct 2015)</li>
+                            <li>I'm for vaccines, but in smaller quantities to avoid autism. (Sep 2015)</li>
+                            <li>We must have universal health care. (Jul 2000)</li>
+                        </ul>
+                    </div>
+                </div>	
+            </div>
+        </div>
+    </div>
+    <div class="center">Issue and candidate data gathered from the Bing Political Index.<br>&copy;2016 Hannah Arnston, Nicholas Hall, Craig Herdle, and Sam Schlesinger</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
