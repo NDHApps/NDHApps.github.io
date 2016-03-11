@@ -28,21 +28,23 @@ div.center.log {
 	width: 200px;
 }
 
+.more-container {
+    margin-top: 50px;
+}
+
+.more-container .more-content {
+    padding: 0px 12px;
+    display: none;
+}
+
+.reverse-range {
+    transform: rotateY(180deg);
+}
 
 #titleBox {
 	font-size: 50px;
 	text-align: center;
 	margin-bottom: 3%;
-}
-
-#questionBox {
-	background: #ffffff;
-	height: 75%;
-	width: 42.5%;
-	margin-left: 5%;
-	margin-right: 5%;
-	display: inline-block;
-	overflow: auto;
 }
 
 #politicalSlider {
@@ -62,6 +64,31 @@ div.center.log {
 	width: 90%;
 	margin-top: 5px;
 	margin-left: 5%;
+}
+
+.party {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.position {
+    font-size: 1.1rem;
+}
+
+.score {
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    padding: 0px 12px;
+    background-color: #ee6e73;
+    border-radius: 18px;
+    margin: -9px 0px;
+    vertical-align: middle; 
 }
 
 #candidateBoxHeader{
@@ -125,10 +152,28 @@ div.center.log {
 	vertical-align: bottom;
 }
 
+.disagree {
+    font-size: 0.9rem;
+    float: left;
+    width:33.33333%;
+    text-align:left;
+}
+.neutral {
+    font-size: 0.9rem;
+    float: left;
+    width:33.33333%;
+    text-align:center;
+}
+.agree {
+    font-size: 0.9rem;
+    float: left;
+    width:33.33333%;
+    text-align:right;
+}​
+
 .Q {
 	display: inline-block;
-	width: 80%;
-	margin-right: 3%;
+	width: 100%;
 }
 
 #sliderText {
@@ -187,10 +232,6 @@ div.center.log {
 	width: 44%;
 	margin-top: 2%;
 	margin-bottom: 2%;
-}
-
-.sliderText {
-	
 }
 
 #sliders {

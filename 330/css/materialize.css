@@ -5640,7 +5640,7 @@ h5 {
   margin: 0.82rem 0 0.656rem 0; }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 110%;
   margin: 0.5rem 0 0.4rem 0; }
 
@@ -5743,7 +5743,7 @@ small {
   border-radius: 2px; }
   .card .card-title {
     font-size: 24px;
-    font-weight: 300; }
+    font-weight: 400; }
     .card .card-title.activator {
       cursor: pointer; }
   .card.small, .card.medium, .card.large {
@@ -5794,12 +5794,10 @@ small {
       line-height: 48px; }
   .card .card-action {
     border-top: 1px solid rgba(160, 160, 160, 0.2);
-    padding: 20px; }
+    padding: 18px; }
     .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
       color: #ffab40;
-      margin-right: 20px;
-      transition: color .3s ease;
-      text-transform: uppercase; }
+      transition: color .3s ease; }
       .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
         color: #ffd8a6; }
   .card .card-reveal {
