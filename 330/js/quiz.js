@@ -10,7 +10,7 @@ $(document).ready(function() {
             $('.question #q' + i).val(myScores[i]);
         }
     } else {
-        myScores = ["","","","","","","","","",""];
+        myScores = ["-","-","-","-","-","-","-","-","-","-"];
     }
     
     // Load candidate scores
@@ -22,7 +22,7 @@ $(document).ready(function() {
     // Update scores when changed
     $('.question input[type=range]').on('input', function() {
         myScores[$(this).attr('id').slice(1)] = parseInt($(this).val());
-        var myScores_JSON = Cookies.set('ElectionQuizScores', myScores);
+        Cookies.set('ElectionQuizScores', myScores);
         updateMatchScores();
     });
     
@@ -40,23 +40,28 @@ $(document).ready(function() {
 
 function updateMatchScores() {
     var candidate;
+    var personalScore;
+    var candidateScores = {};
     for (candidate of candidates) {
         var totalMatchScore = 0;
         var scoreCount = 0;
+        personalScore = 0;
         for (var i = 0; i < 10; i++) {
-            if (myScores[i] != "") {
-                var score = 120 - (Math.abs(myScores[i] - candidate.scores[i]));
+            if (myScores[i] != "-") {
+                personalScore += myScores[i];
+                var score = 125 - (Math.abs(myScores[i] - candidate.scores[i]));
                 score = Math.min(110,score);
                 score = Math.max(-10,score);
                 totalMatchScore += score;
                 scoreCount++;
             }
         }
+        personalScore = Math.round((100 + (personalScore / scoreCount)) / 2);
         averageMatchScore = totalMatchScore / scoreCount;
         averageMatchScore = Math.min(100,averageMatchScore);
         averageMatchScore = Math.max(0,averageMatchScore);
         if (scoreCount) {
-            candidate.matchScore = averageMatchScore;
+            candidate.matchScore = roundToOne(averageMatchScore);
         }
     }
     candidates.sort(keysrt('matchScore'));
@@ -65,8 +70,13 @@ function updateMatchScores() {
         $(".candidates #c" + i + " .party").text(candidates[i].party);
         $(".candidates #c" + i + " .position").text(candidates[i].position);
         $(".candidates #c" + i + " .score").text(candidates[i].matchScore);
-        console.log(candidate.name, candidate.matchScore);
+        $(".candidates #c" + i + " .picture").attr("src",candidates[i].picture);
+        $(".candidates #c" + i + " .learn-more").attr("href",candidates[i].id+".html");
+        candidateScores[candidates[i].name] = candidates[i].matchScore;
     }
+    $(".spectrumX").css("margin-left", "calc(" + personalScore + "% - 2px)");
+    Cookies.set('MySpectrumScore',personalScore);
+    Cookies.set('MyMatchScores',candidateScores);
 }
 
 function keysrt(key) {
@@ -75,6 +85,10 @@ function keysrt(key) {
    if (a[key] < b[key]) return 1;
    return 0;
   }
+}
+
+function roundToOne(num) {    
+    return +(Math.round(num + "e+1")  + "e-1");
 }
 
 function loadJSON(path, callback) {

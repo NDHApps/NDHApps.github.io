@@ -9,6 +9,15 @@ body.splash {
 	font-size: 24px;
 }
 
+.nav-item-wrapper {
+    display: inline;
+}
+
+.nav-item {
+    float: left;
+    margin-right: 20px;
+}
+
 input[type=text]:focus {
 	border-bottom: 1px solid orange;
 	-webkit-box-shadow: 0 1px 0 0 orange;
@@ -48,11 +57,44 @@ div.center.log {
 }
 
 #politicalSlider {
+    margin: 12px 0px;
 	background: linear-gradient(to right, #42a5f5,white,#ef5350);
-	height: 10px;
-	width: 80%;
-	margin-top: 1%;
-	margin-left: 10%;
+    border-radius: 18px;
+	height: 36px;
+}
+
+.spectrumX {
+    margin-top: -54px;
+    margin-left: calc(50% - 2px);
+	background: black;
+	height: 48px;
+    border-radius: 2px;
+    width: 4px;
+    z-index: 1000;
+}
+
+.spectrumX.spectrumClinton {
+    margin-left: calc(21.95% - 2px);
+}
+
+.spectrumX.spectrumSanders {
+    margin-left: calc(19.45% - 2px);
+}
+
+.spectrumX.spectrumTrump {
+    margin-left: calc(68.25% - 2px);
+}
+
+.spectrumX.spectrumKasich {
+    margin-left: calc(69.05% - 2px);
+}
+
+.spectrumX.spectrumCruz {
+    margin-left: calc(82.25% - 2px);
+}
+
+.spectrumX.spectrumRubio {
+    margin-left: calc(75% - 2px);
 }
 
 .question {
@@ -73,6 +115,24 @@ div.center.log {
 
 .position {
     font-size: 1.1rem;
+}
+
+rect {
+    background-color: black;
+    width: 5px;
+    height: 20px;
+}
+
+.add-padding-top {
+    padding-top: 12px !important;
+}
+
+.add-padding-left {
+    padding-left: 20px !important;
+}
+
+.add-padding-right {
+    padding-right: 20px !important;
 }
 
 .score {
@@ -177,9 +237,15 @@ div.center.log {
 }
 
 #sliderText {
-	margin-top: 2%;
+	margin: 20px auto;
 	text-align: center;
-	font-size: 20px;
+	font-size: 1.64rem;
+}
+
+#sliderText2 {
+	margin: 20px auto;
+	text-align: center;
+	font-size: 1.25rem;
 }
 
 
@@ -224,16 +290,4 @@ div.center.log {
 .info {
 	padding-left: 0px;
 	font-size: 15px;
-}
-
-.politicalSlider {
-	background: linear-gradient(to right, #42a5f5,white,#ef5350);
-	height: 10px;
-	width: 44%;
-	margin-top: 2%;
-	margin-bottom: 2%;
-}
-
-#sliders {
-	margin-top: -15%;
 }
