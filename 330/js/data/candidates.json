@@ -1,0 +1,8 @@
+{"candidates":[
+    {"name":"Bernie Sanders", "id":"Sanders", "picture":"", "scores":[-43,-33,-47,-71,-73,-51,-48,-79,-58,-58]},
+    {"name":"Hillary Clinton", "id":"Clinton", "picture":"", "scores":[-43,-33,-47,-71,-73,-51,-48,-79,-58,-58]},
+    {"name":"Donald Trump", "id":"Trump", "picture":"", "scores":[-43,-33,-47,-71,-73,-51,-48,-79,-58,-58]},
+    {"name":"John Kasich", "id":"Kasich", "picture":"", "scores":[-43,-33,-47,-71,-73,-51,-48,-79,-58,-58]},
+    {"name":"Ted Cruz", "id":"Cruz", "picture":"", "scores":[-43,-33,-47,-71,-73,-51,-48,-79,-58,-58]},
+    {"name":"Marco Rubio", "id":"Rubio", "picture":"", "scores":[-43,-33,-47,-71,-73,-51,-48,-79,-58,-58]}
+]}

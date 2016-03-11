@@ -4,7 +4,9 @@
 	<title>Election Quiz</title>
 	<link rel="stylesheet" type="text/css" href="css/election_quiz.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script> 
+	<script src="js/bin/materialize.js"></script>
+    <script type="text/javascript" src="js/quiz.js"></script>
 </head>
 
 <body class="quiz">
@@ -20,42 +22,52 @@
 		<div class="question">
 			<div class="Q">This is question 1</div>
 			<div class="qLink">More...</div>
-			<input type="range" class="qSlider"></input>
+			<input type="range" min="-100" max="100" value="0" step="1" id="q1"></input>
 		</div>
 		<div class="question">
 			<div class="Q">This is question 2</div>
 			<div class="qLink">More...</div>
-			<input type="range" class="qSlider"></input>
+			<input type="range" min="-100" max="100" value="0" step="1" id="q2"></input>
 		</div>
 		<div class="question">
 			<div class="Q">This is question 3</div>
 			<div class="qLink">More...</div>
-			<input type="range" class="qSlider"></input>
+			<input type="range" min="-100" max="100" value="0" step="1" id="q3"></input>
 		</div>
 		<div class="question">
 			<div class="Q">This is question 4</div>
 			<div class="qLink">More...</div>
-			<input type="range" class="qSlider"></input>
+			<input type="range" min="-100" max="100" value="0" step="1" id="q4"></input>
 		</div>
 		<div class="question">
 			<div class="Q">This is question 5. Question 5 is really long to show text wrap</div>
 			<div class="qLink">More...</div>
-			<input type="range" class="qSlider"></input>
+			<input type="range" min="-100" max="100" value="0" step="1" id="q5"></input>
 		</div>
 		<div class="question">
 			<div class="Q">This is question 6</div>
 			<div class="qLink">More...</div>
-			<input type="range" class="qSlider"></input>
+			<input type="range" min="-100" max="100" value="0" step="1" id="q6"></input>
 		</div>
 		<div class="question">
 			<div class="Q">This is question 7</div>
 			<div class="qLink">More...</div>
-			<input type="range" class="qSlider"></input>
+			<input type="range" min="-100" max="100" value="0" step="1" id="q7"></input>
 		</div>
 		<div class="question">
 			<div class="Q">This is question 8</div>
 			<div class="qLink">More...</div>
-			<input type="range" class="qSlider"></input>
+			<input type="range" min="-100" max="100" value="0" step="1" id="q8"></input>
+		</div>
+        <div class="question">
+			<div class="Q">This is question 9</div>
+			<div class="qLink">More...</div>
+			<input type="range" min="-100" max="100" value="0" step="1" id="q9"></input>
+		</div>
+        <div class="question">
+			<div class="Q">This is question 10</div>
+			<div class="qLink">More...</div>
+			<input type="range" min="-100" max="100" value="0" step="1" id="q10"></input>
 		</div>
 	</div>
 	<div id="candidateBox">
