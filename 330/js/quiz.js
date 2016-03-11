@@ -7,7 +7,7 @@ $(document).ready(function() {
     if(Cookies.getJSON('ElectionQuizScores')) {
         myScores = Cookies.getJSON('ElectionQuizScores');
         for (var i = 0; i < 10; i++) {
-            if ($('.question #q' + i).hasClass('reverse-range')) {
+            if ($('#q' + i).hasClass('reverse-range')) {
                 $('.question #q' + i).val(-1*myScores[i]);
             } else {
                 $('.question #q' + i).val(myScores[i]);
