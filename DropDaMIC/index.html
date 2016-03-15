@@ -77,7 +77,7 @@
                 <div class="section" id="Method">
                     <h4 class="deep-purple-text">Method</h4>
                     <div class="flow-text">
-                        We used musical instrument samples from the <a href="http://theremin.music.uiowa.edu/MIS.html">University of Iowa Musical Instrument Samples (MIS)</a> dataset. We picked five (5) very different sounding instruments to put into our database: flute, bass clarinet, french horn, violin, and double bass. We then spliced these recordings into different frames and recorded selected features for each of these frames: discrete Fourier transform (DFT) magnitudes, mel-frequency cepstral coefficients (MFCCs), and energy changes from frame to frame. Next, we created a K-nearest neighbor classifier using <a href="http://scikit-learn.org/stable/">scikit-learn</a>. To evaluate our method we tested to see if we could correctly identify instruments using our training data as input, then using other solo recordings of these instruments as input, and finally using recordings of multiple instruments as input.
+                        We used musical instrument samples from the <a href="http://theremin.music.uiowa.edu/MIS.html">University of Iowa Musical Instrument Samples (MIS)</a> dataset. We picked five (5) very different sounding instruments to put into our database: flute, bass clarinet, french horn, violin, and double bass. We loaded several short 2-3 second .wav samples of each using Librosa and then used the middle-most second of each audio file to account for silence at the beginning and end of notes. From there, we divided each audio sample into 2048 sample frames. For each sample, we calculated discrete Fourier transform (DFT) magnitudes, mel-frequency cepstral coefficients (MFCCs), and energy changes from frame to frame and recorded them along with the label (the instrument) in a hash table so we wouldn't have to recalculate every time we called the classifier. Next, we created a K-nearest neighbor classifier using <a href="http://scikit-learn.org/stable/">scikit-learn</a>. When a new input file is given, we would (like the other files) load it in with Librosa, crop it, divide it into frames and calculate the features- for each frame, we would calculate the minimum euclidean distance from the input feature space to each sample frame in our hash table's feature space. After all the frames had been tested, the instrument with the largest number of frames that were labelled as nearest-neighbor were said to be the algorithm's "guess."
                         <br><br>
                     </div>
                 </div>
@@ -85,13 +85,11 @@
                 <div class="section" id="Results">
                     <h4 class="deep-purple-text">Results</h4>
                     <div class="flow-text">
-                        Lorem ipsum dolor sit amet, agam nostro commodo vix ex, sit id explicari instructior. At sed audiam corrumpit, option interesset ex vix. Sale laboramus ne qui. Ea per augue vivendum. No vel posse forensibus.
-                        <br><br>
-                        Ex intellegat maiestatis sea, no magna alterum tractatos eos. Id mei dicta percipitur, movet saperet efficiantur cu vel, ad veritus percipitur efficiendi eum. Et qui liberavisse definitiones, nam alii atomorum definiebas ei. An oratio forensibus persequeris eum, accumsan splendide eum et.
-                        <br><br>                        
-                        At est veniam audiam inermis. Epicuri probatus perfecto an per. Summo nostrum eu vel, ridens convenire temporibus qui an. Porro sonet vix ad, no populo accusamus dissentiunt vix.
-                        <br><br>
-                        Sea at novum ignota. Civibus mandamus ius ea, omnes eloquentiam id eum. Ei dolore dolorem delectus vim, ex summo docendi vel, eos deserunt abhorreant ei. In nec nonumy ridens audire, nec te alterum voluptua, id iusto intellegam est. Ceteros propriae at his, ad pri aliquam utroque, sit ei eripuit sapientem persequeris.
+                        When we compared two very different instruments--we started with a flute and a trumpet--our classifier was very accurate. However, when we used a full training set that contained 5 instruments (flute, bass clarinet, french horn, violin, and double bass), with 44-104 distinct samples of each instrument over a wide range of notes, we found some interesting results.
+                        <br><br>  
+                        Almost all of our recordings ended up being labeled as stringed instruments, either violin or double bass. A few were labeled as flutes, and not one recording was labeled as a bass clarinet or french horn, despite running 46 and 44 samples, respectively, of each instrument through the classifier. We are unsure of why the classifier ended up being heavily weighted in favor or stringed instruments. However, we did notice that each instrument's lowest pitched recordings tended to get classified as double bass, while the higher recordings were labeled as violin. This trend was noticeable across the actual violin and double bass recordings as well.
+                        <br><br>  
+                        To further improve our classifier, we would spend more time experimenting with feature weights.
                         <br><br>
                     </div>
                 </div>
