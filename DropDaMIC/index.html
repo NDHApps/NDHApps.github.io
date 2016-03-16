@@ -25,14 +25,14 @@
                             <li><a href="#About">About</a></li>
                             <li><a href="#Method">Method</a></li>
                             <li><a href="#Results">Results</a></li>
-                            <li><a href="GitHub">GitHub</a></li>
+                            <li><a href="https://github.com/jasonlustbader/eecs352finalproject">GitHub</a></li>
                         </ul>
                         <ul class="side-nav" id="mobile-demo">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="#About">About</a></li>
                             <li><a href="#Method">Method</a></li>
                             <li><a href="#Results">Results</a></li>
-                            <li><a href="GitHub">GitHub</a></li>
+                            <li><a href="https://github.com/jasonlustbader/eecs352finalproject">GitHub</a></li>
                         </ul>
                     </div>
                 </div>
@@ -63,13 +63,12 @@
                 <div class="divider"></div>
                 <div class="section" id="About">
                     <h4 class="deep-purple-text">About</h4>
+                    <div class="flow-text">
+                        DropDa Mic is a musical instrument classification system that can identify a musical instrument from a short sample of that instrument playing. Our team identified common musical instruments used in classical music recordings and compiled a library of many short samples for each of these selected instruments. We then chose specific features for each sample that we thought would be relevant based on what we learned in the class and used a K-Nearest Neighbors algorithm (KNN) to classify samples.
+                    </div>
                     <h5>Motivation</h5>
                     <div class="flow-text">
-                        We are all very musical and can easily tell the difference between different instruments and groupings of instruments. We think it would be interesting to teach a computer to make the same differentiations.
-                    </div>
-                    <h5>Description</h5>
-                    <div class="flow-text">
-                        Our team will be identifying the instruments used in various classical music recordings. We will create a system that can tell the difference between a solo piano, a solo horn, a string quartet, an entire orchestra, etc. We will take a .wav file as input. The user will specify the file either on the command line or as a website upload, depending of our final interface. The file will contain audio from a recording of a classical piece of music. The system will then compare the recording to the training samples and use K-nearest neighbors to identify the sample's instrumentation.
+                        We are all very musical and can easily tell the difference between different instruments and groupings of instruments. We thought it would be interesting to teach a computer to make the same differentiations.
                         <br><br>
                     </div>
                 </div>
@@ -80,6 +79,14 @@
                         We used musical instrument samples from the <a href="http://theremin.music.uiowa.edu/MIS.html">University of Iowa Musical Instrument Samples (MIS)</a> dataset. We picked five (5) very different sounding instruments to put into our database: flute, bass clarinet, french horn, violin, and double bass. We loaded several short 2-3 second .wav samples of each using Librosa and then used the middle-most second of each audio file to account for silence at the beginning and end of notes. From there, we divided each audio sample into 2048 sample frames. For each sample, we calculated discrete Fourier transform (DFT) magnitudes, mel-frequency cepstral coefficients (MFCCs), and energy changes from frame to frame and recorded them along with the label (the instrument) in a hash table so we wouldn't have to recalculate every time we called the classifier. Next, we created a K-nearest neighbor classifier using <a href="http://scikit-learn.org/stable/">scikit-learn</a>. When a new input file is given, we would (like the other files) load it in with Librosa, crop it, divide it into frames and calculate the features- for each frame, we would calculate the minimum euclidean distance from the input feature space to each sample frame in our hash table's feature space. After all the frames had been tested, the instrument with the largest number of frames that were labelled as nearest-neighbor were said to be the algorithm's "guess."
                         <br><br>
                     </div>
+                    <h5 class="center">Process Diagram</h5>
+                    <img src="1.jpg" class="responsive-img center-block">
+                    <br><br>
+                    <h5 class="center">Sample</h5>
+                    <img src="2.jpg" class="responsive-img center-block">
+                    <img src="3.jpg" class="responsive-img center-block">
+                    <img src="4.jpg" class="responsive-img center-block">
+                    <br><br>
                 </div>
                 <div class="divider"></div>
                 <div class="section" id="Results">
@@ -92,6 +99,9 @@
                         To further improve our classifier, we would spend more time experimenting with feature weights.
                         <br><br>
                     </div>
+                    <h5 class="center">Confusion Matrix</h5>
+                    <img src="5.jpg" class="responsive-img center-block">
+                    <br><br>
                 </div>
             </div>
         </div>
